@@ -38,5 +38,15 @@ class HomeController extends Controller
     {
         return view('home.blog');
     }
+
+
+
+    public function blog_post()
+    {
+        return view('home.blog_post');
+    }
     
+
+      
+
 }

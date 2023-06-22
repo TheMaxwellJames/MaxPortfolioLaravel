@@ -23,7 +23,7 @@
         <div class="col-lg-4 bg position-fixed d-none d-lg-block"></div>
         <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
             <div>
-                <img src="img/img-mobile.jpg" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
+                 <img src="{{ asset('img/th.jpg')}}" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" /> 
                 <h1 class="text-uppercase poppins-font">I'm Maxwell James.<span>Software developer</span></h1>
                 <p class="open-sans-font">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
                 <a class="button" href="{{url('about')}}">
