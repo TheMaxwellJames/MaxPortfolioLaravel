@@ -1,5 +1,8 @@
 <meta charset="utf-8">
-    <title>Maxwell - Personal Portfolio</title>
+  
+  
+    <title>Maxwell - {!! !empty($meta_title) ? $meta_title : '' !!} - Personal Portfolio</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Template Google Fonts -->

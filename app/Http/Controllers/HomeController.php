@@ -8,26 +8,30 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('home.index');
+        $data['meta_title'] = 'Home';
+        return view('home.index', $data);
     }
 
 
     public function about()
     {
-        return view('home.about');
+        $data['meta_title'] = 'About Me';
+        return view('home.about', $data);
     }
 
 
     public function portfolio()
     {
-        return view('home.portfolio');
+        $data['meta_title'] = 'My Portfolio';
+        return view('home.portfolio', $data);
     }
 
 
 
     public function contact()
     {
-        return view('home.contact');
+        $data['meta_title'] = 'Contact Me';
+        return view('home.contact', $data);
     }
 
 
@@ -36,14 +40,16 @@ class HomeController extends Controller
     
     public function blog()
     {
-        return view('home.blog');
+        $data['meta_title'] = 'My Blog';
+        return view('home.blog', $data);
     }
 
 
 
     public function blog_post()
     {
-        return view('home.blog_post');
+        $data['meta_title'] = 'Blog-Post';
+        return view('home.blog_post', $data);
     }
     
 
