@@ -8,6 +8,8 @@ use Hash;
 use App\Models\User;
 use Auth;
 use Session;
+use Mail;
+use App\Mail\ForgotPasswordMail;
 
 class AuthController extends Controller
 {
@@ -17,7 +19,7 @@ class AuthController extends Controller
       // $password = "password";
       // $dd = Hash::make($password);
       // dd($dd);
-       return view('backend.auth.login');
+        return view('backend.auth.login');
     }
 
 
@@ -62,4 +64,28 @@ class AuthController extends Controller
       Auth::logout();
       return redirect(url('login'));
     }
+
+
+
+
+   
+
+    public function forgot_admin(Request $request)
+{
+    $random_password = rand(111111111, 999999999);
+    $user = User::where('email', '=', $request->email)->first();
+    if (!empty($user)) {
+        $user->password = Hash::make($random_password);
+        $user->save();
+
+        $user->password_random = $random_password;
+
+        Mail::to($user->email)->send(new ForgotPasswordMail($user, $random_password));
+
+        return redirect()->back()->with('success', 'Password Sent To Your mail');
+    } else {
+        return redirect()->back()->with('error', 'Email Id Not Found');
+    }
+}
+
 }
