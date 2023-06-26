@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from slimhamdi.net/tunis/dark/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Jun 2023 23:26:07 GMT -->
+
 <head>
 @include('home.css')
 </head>
@@ -36,20 +36,20 @@
                     </div>
                     <div class="col-6">
                         <ul class="about-list list-unstyled open-sans-font">
-                            <li> <span class="title">first name :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Steve</span> </li>
-                            <li> <span class="title">last name :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Milner</span> </li>
-                            <li> <span class="title">Age :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">27 Years</span> </li>
-                            <li> <span class="title">Nationality :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Tunisian</span> </li>
-                            <li> <span class="title">Freelance :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Available</span> </li>
+                            <li> <span class="title">first name :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->first_name }}</span> </li>
+                            <li> <span class="title">last name :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->last_name }}</span> </li>
+                            <li> <span class="title">Age :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->age }}</span> </li>
+                            <li> <span class="title">Nationality :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->nationality }}</span> </li>
+                            <li> <span class="title">Freelance :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->freelance }}</span> </li>
                         </ul>
                     </div>
                     <div class="col-6">
                         <ul class="about-list list-unstyled open-sans-font">
-                            <li> <span class="title">Address :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Tunis</span> </li>
-                            <li> <span class="title">phone :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">+21621184010</span> </li>
-                            <li> <span class="title">Email :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">you@mail.com</span> </li>
-                            <li> <span class="title">Skype :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">steve.milner</span> </li>
-                            <li> <span class="title">langages :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">French, English</span> </li>
+                            <li> <span class="title">Address :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->address}}</span> </li>
+                            <li> <span class="title">phone :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->phone }}</span> </li>
+                            <li> <span class="title">Email :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->email }}</span> </li>
+                            <li> <span class="title">Github :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->github }}</span> </li>
+                            <li> <span class="title">languages :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->languages }}</span> </li>
                         </ul>
                     </div>
                     <div class="col-12 mt-3">
@@ -66,25 +66,25 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="box-stats with-margin">
-                            <h3 class="poppins-font position-relative">12</h3>
+                            <h3 class="poppins-font position-relative">{{ @$getrecord[0]->years_of_experience }}</h3>
                             <p class="open-sans-font m-0 position-relative text-uppercase">years of <span class="d-block">experience</span></p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="box-stats with-margin">
-                            <h3 class="poppins-font position-relative">97</h3>
+                            <h3 class="poppins-font position-relative">{{ @$getrecord[0]->completed_projects }}</h3>
                             <p class="open-sans-font m-0 position-relative text-uppercase">completed <span class="d-block">projects</span></p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="box-stats">
-                            <h3 class="poppins-font position-relative">81</h3>
+                            <h3 class="poppins-font position-relative">{{ @$getrecord[0]->happy_customers }}</h3>
                             <p class="open-sans-font m-0 position-relative text-uppercase">Happy<span class="d-block">customers</span></p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="box-stats">
-                            <h3 class="poppins-font position-relative">53</h3>
+                            <h3 class="poppins-font position-relative">{{ @$getrecord[0]->awards_won }}</h3>
                             <p class="open-sans-font m-0 position-relative text-uppercase">awards <span class="d-block">won</span></p>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 <div class="c100 p25">
-                    <span>25%</span>
+                    <span>{{ @$getrecord[0]->html }}%</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
@@ -110,17 +110,17 @@
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 <div class="c100 p89">
-                     <span>89%</span> 
+                     <span>{{ @$getrecord[0]->javascript }}%</span> 
                     <div class="slice">
-                        <!-- <div class="bar"></div> -->
-                        <!-- <div class="fill"></div> -->
+                        <div class="bar"></div> 
+                         <div class="fill"></div>
                     </div>
                 </div>
                 <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">javascript</h6>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 <div class="c100 p70">
-                    <span>70%</span>
+                    <span>{{ @$getrecord[0]->css }}%</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
@@ -130,7 +130,7 @@
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 <div class="c100 p66">
-                    <span>66%</span>
+                    <span>{{ @$getrecord[0]->php }}%</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
@@ -140,43 +140,43 @@
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 <div class="c100 p95">
-                    <span>95%</span>
+                    <span>{{ @$getrecord[0]->laravel }}%</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
                 </div>
-                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">wordpress</h6>
+                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">Laravel</h6>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 <div class="c100 p50">
-                    <span>50%</span>
+                    <span>{{ @$getrecord[0]->flutter }}%</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
                 </div>
-                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">jquery</h6>
+                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">Flutter</h6>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 <div class="c100 p65">
-                    <span>65%</span>
+                    <span>{{ @$getrecord[0]->python }}%</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
                 </div>
-                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">angular</h6>
+                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">Python</h6>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 <div class="c100 p45">
-                    <span>45%</span>
+                    <span>{{ @$getrecord[0]->django }}%</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
                 </div>
-                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">react</h6>
+                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">Django</h6>
             </div>
         </div>
         <!-- Skills Ends -->
@@ -193,11 +193,11 @@
                             <div class="icon">
                                 <i class="fa fa-briefcase"></i>
                             </div>
-                            <span class="time open-sans-font text-uppercase">2018 - Present</span>
-                            <h5 class="poppins-font text-uppercase">Web Developer <span class="place open-sans-font">Envato</span></h5>
-                            <p class="open-sans-font">Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit, </p>
+                            <span class="time open-sans-font text-uppercase">{{ @$getrecord[0]->year_of_experience }}</span>
+                            <h5 class="poppins-font text-uppercase">{{ @$getrecord[0]->title }} <span class="place open-sans-font">{{ @$getrecord[0]->sub_title }}</span></h5>
+                            <p class="open-sans-font">{{ @$getrecord[0]->description }}</p>
                         </li>
-                        <li>
+                        <!-- <li>
                             <div class="icon">
                                 <i class="fa fa-briefcase"></i>
                             </div>
@@ -212,11 +212,11 @@
                             <span class="time open-sans-font text-uppercase">2005 - 2013</span>
                             <h5 class="poppins-font text-uppercase">Consultant <span class="place open-sans-font">Videohive</span></h5>
                             <p class="open-sans-font">Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt</p>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-6 m-15px-tb">
+            <!-- <div class="col-lg-6 m-15px-tb">
                 <div class="resume-box">
                     <ul>
                         <li>
@@ -245,7 +245,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- Experience & Education Ends -->
     </div>

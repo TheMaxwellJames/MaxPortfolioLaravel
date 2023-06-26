@@ -85,7 +85,8 @@ class DashboardController extends Controller
 
     public function admin_about(Request $request)
     {
-        return view('backend.dashboard.about');
+        $data['getrecord'] = AboutModel::all();
+        return view('backend.dashboard.about', $data);
     }
 
 
@@ -93,8 +94,17 @@ class DashboardController extends Controller
     public function admin_about_post(Request $request)
     {
         //dd($request->all());
-
-        $insertRecord = new AboutModel;
+            if($request->ass_to_update == "Add")
+            {
+                $insertRecord  =request()->validate([
+                    'first_name' => 'required'
+                ]);
+                $insertRecord = new AboutModel;
+            }else 
+            {
+                $insertRecord =  AboutModel::find($request->id);
+            }
+        
         $insertRecord->first_name = trim($request->first_name);
         $insertRecord->last_name = trim($request->last_name);
         $insertRecord->age = trim($request->age);
@@ -104,6 +114,7 @@ class DashboardController extends Controller
         $insertRecord->	phone = trim($request->phone);
         $insertRecord->	email = trim($request->email);
         $insertRecord->github = trim($request->github);
+        $insertRecord->languages = trim($request->languages);
         $insertRecord->years_of_experience = trim($request->years_of_experience);
         $insertRecord->completed_projects = trim($request->completed_projects);
         $insertRecord->happy_customers = trim($request->happy_customers);
