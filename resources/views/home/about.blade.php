@@ -110,10 +110,10 @@
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 <div class="c100 p89">
-                    <span>89%</span>
+                     <span>89%</span> 
                     <div class="slice">
-                        <div class="bar"></div>
-                        <div class="fill"></div>
+                        <!-- <div class="bar"></div> -->
+                        <!-- <div class="fill"></div> -->
                     </div>
                 </div>
                 <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">javascript</h6>

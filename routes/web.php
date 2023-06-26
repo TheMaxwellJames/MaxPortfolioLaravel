@@ -52,6 +52,8 @@ Route::post('admin/home/post', [DashboardController::class, 'admin_home_post']);
 
 Route::get('admin/about', [DashboardController::class, 'admin_about']);
 
+Route::post('admin/about/post', [DashboardController::class, 'admin_about_post']);
+
 Route::get('admin/portfolio', [DashboardController::class, 'admin_portfolio']);
 
 Route::get('admin/contact', [DashboardController::class, 'admin_contact']);
