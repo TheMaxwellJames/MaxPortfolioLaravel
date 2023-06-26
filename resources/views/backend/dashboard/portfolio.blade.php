@@ -33,9 +33,58 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
+
+        @include('message')
+
+        <a href="{{ url('admin/portfolio/add') }}" class="btn btn-primary">Add Portolio</a>
+
         <div class="row">
         
-          <!-- ./col -->
+       
+          <section class="col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Title</th>
+                      <th>Image</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    @foreach($getrecord as $value)
+                    <tr>
+                      <td>{{ $value->id }}</td>
+                      <td>{{ $value->title }}</td>
+                      <td>
+                        @if(!empty($value->image))
+                        
+                        <!-- @if(file_exists(public_path('public/portfolio/'.$value->image))) -->
+                   
+                       
+                        <img src="{{ url('public/portfolio/'.$value->image) }}" alt="" style="height:80px; width:80px;">
+
+
+                        <!-- @endif -->
+
+                        @endif
+                      </td>
+                      <td>
+                        <a href="" class="btn btn-primary">Edit</a>
+                        <a href="" class="btn btn-danger">Delete</a>
+
+                      </td>
+                    </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
         </div>
         <!-- /.row -->
         <!-- Main row -->

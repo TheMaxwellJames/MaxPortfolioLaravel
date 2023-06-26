@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use App\Models\HomeModel;
 use App\Models\AboutModel;
+use App\Models\PortfolioModel;
 use Str;
 
 class DashboardController extends Controller
@@ -142,10 +143,20 @@ class DashboardController extends Controller
 
 
 
+
+
+
     public function admin_portfolio(Request $request)
     {
-        return view('backend.dashboard.portfolio');
+
+        $data['getrecord'] = PortfolioModel::get();
+        return view('backend.dashboard.portfolio', $data);
     }
+
+
+
+
+
 
 
 

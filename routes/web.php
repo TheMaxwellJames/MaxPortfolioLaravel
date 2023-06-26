@@ -8,6 +8,8 @@ use App\Http\Controllers\Backend\AuthController;
 
 use App\Http\Controllers\Backend\DashboardController;
 
+use App\Http\Controllers\Backend\PortfolioController;
+
 
 
 /*
@@ -56,10 +58,17 @@ Route::post('admin/about/post', [DashboardController::class, 'admin_about_post']
 
 Route::get('admin/portfolio', [DashboardController::class, 'admin_portfolio']);
 
+
+
 Route::get('admin/contact', [DashboardController::class, 'admin_contact']);
 
 
 Route::get('admin/blog', [DashboardController::class, 'admin_blog']);
+
+
+Route::get('admin/portfolio/add', [PortfolioController::class, 'portfolio_add']);
+
+Route::post('admin/portfolio/add', [PortfolioController::class, 'portfolio_add_post']);
 
 
 });
