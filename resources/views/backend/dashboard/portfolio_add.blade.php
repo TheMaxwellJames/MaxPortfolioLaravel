@@ -64,6 +64,50 @@
             </div>
 
 
+            <div class="form-group row">
+              <label for="" class="col-sm-2 col-form-label">Project Name <span style="color: red;">*</span></label>
+              <div class="col-sm-10">
+                <input type="text" name="name" class="form-control" placeholder="Project Name" value="" required>
+
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group row">
+              <label for="" class="col-sm-2 col-form-label">Client Name <span style="color: red;">*</span></label>
+              <div class="col-sm-10">
+                <input type="text" name="client" class="form-control" placeholder="Client Name" value="" required>
+
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group row">
+              <label for="" class="col-sm-2 col-form-label">Languages <span style="color: red;">*</span></label>
+              <div class="col-sm-10">
+                <input type="text" name="languages" class="form-control" placeholder="Languages" value="" required>
+
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group row">
+              <label for="" class="col-sm-2 col-form-label">Preview <span style="color: red;">*</span></label>
+              <div class="col-sm-10">
+                <input type="text" name="preview" class="form-control" placeholder="Preview" value="" required>
+
+
+              </div>
+
+            </div>
+
+
 
             <div class="form-group row">
               <label for="" class="col-sm-2 col-form-label">Portolio Image <span style="color: red;">*</span></label>

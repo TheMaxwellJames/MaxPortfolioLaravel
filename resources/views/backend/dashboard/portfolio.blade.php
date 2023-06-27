@@ -49,6 +49,10 @@
                     <tr>
                       <th>ID</th>
                       <th>Title</th>
+                      <th>Name</th>
+                      <th>Client</th>
+                      <th>Languages</th>
+                      <th>Preview</th>
                       <th>Image</th>
                       <th>Action</th>
                     </tr>
@@ -59,6 +63,10 @@
                     <tr>
                       <td>{{ $value->id }}</td>
                       <td>{{ $value->title }}</td>
+                      <td>{{ $value->name }}</td>
+                      <td>{{ $value->client }}</td>
+                      <td>{{ $value->languages }}</td>
+                      <td>{{ $value->preview }}</td>
                       <td>
                         @if(!empty($value->image))
                         
