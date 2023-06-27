@@ -73,8 +73,8 @@
                         @endif
                       </td>
                       <td>
-                        <a href="" class="btn btn-primary">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a>
+                        <a href="{{ url('admin/portfolio/edit/' . $value->id) }}" class="btn btn-primary">Edit</a>
+                        <a onclick="return confirm('Sure to delete?')" href="{{ url('admin/portfolio/delete/' . $value->id) }}" class="btn btn-danger">Delete</a>
 
                       </td>
                     </tr>

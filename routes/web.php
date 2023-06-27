@@ -70,6 +70,12 @@ Route::get('admin/portfolio/add', [PortfolioController::class, 'portfolio_add'])
 
 Route::post('admin/portfolio/add', [PortfolioController::class, 'portfolio_add_post']);
 
+Route::get('admin/portfolio/edit/{id}', [PortfolioController::class, 'admin_portfolio_edit']);
+
+Route::post('admin/portfolio/edit/{id}', [PortfolioController::class, 'admin_portfolio_edit_post']);
+
+Route::get('admin/portfolio/delete/{id}', [PortfolioController::class, 'admin_portfolio_delete']);
+
 
 });
 
