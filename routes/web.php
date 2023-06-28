@@ -63,6 +63,9 @@ Route::get('admin/portfolio', [DashboardController::class, 'admin_portfolio']);
 Route::get('admin/contact', [DashboardController::class, 'admin_contact']);
 
 
+Route::get('admin/contact/delete/{id}', [DashboardController::class, 'admin_contact_delete']);
+
+
 Route::get('admin/blog', [DashboardController::class, 'admin_blog']);
 
 
@@ -75,6 +78,8 @@ Route::get('admin/portfolio/edit/{id}', [PortfolioController::class, 'admin_port
 Route::post('admin/portfolio/edit/{id}', [PortfolioController::class, 'admin_portfolio_edit_post']);
 
 Route::get('admin/portfolio/delete/{id}', [PortfolioController::class, 'admin_portfolio_delete']);
+
+
 
 
 });

@@ -32,10 +32,51 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+
+      @include('message')
+
         <!-- Small boxes (Stat box) -->
         <div class="row">
         
-          <!-- ./col -->
+          
+        <section class="col-lg-12">
+
+        <div class="card">
+        <div class="card-header">
+          <table class="table table-bordered table-hover">
+
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Subject</th>
+              <th>Message</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            @foreach($getRecord as $value)
+            <tr>
+              <td>{{ $value->id }}</td>
+              <td>{{ $value->name }}</td>
+              <td>{{ $value->email }}</td>
+              <td>{{ $value->subject }}</td>
+              <td>{{ $value->message }}</td>
+              <td>
+                <a href="{{url('admin/contact/delete/'.$value->id)}}" onclick="return confirm('Sure to delete?')" class="btn btn-danger">Delete</a>
+              </td>
+            </tr>
+            @endforeach
+          </tbody>
+
+          </table>
+        </div>
+        </div>
+
+        </section>
+
         </div>
         <!-- /.row -->
         <!-- Main row -->

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\HomeModel;
 use App\Models\AboutModel;
 use App\Models\PortfolioModel;
+use App\Models\ContactModel;
 use Str;
 
 class DashboardController extends Controller
@@ -162,7 +163,22 @@ class DashboardController extends Controller
 
     public function admin_contact(Request $request)
     {
-        return view('backend.dashboard.contact');
+
+        $data['getRecord'] = ContactModel::get();
+        return view('backend.dashboard.contact', $data);
+    }
+
+
+
+    public function admin_contact_delete(Request $request, $id)
+    {
+        $removeDelete = ContactModel::find($id);
+
+        $removeDelete->delete();
+
+        return redirect()->back()->with('error', 'Deleted Successfully');
+
+
     }
 
 
