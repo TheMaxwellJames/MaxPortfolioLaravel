@@ -48,7 +48,7 @@
                             <li> <span class="title">Address :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->address}}</span> </li>
                             <li> <span class="title">phone :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->phone }}</span> </li>
                             <li> <span class="title">Email :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->email }}</span> </li>
-                            <li> <span class="title">Github :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->github }}</span> </li>
+                            <li> <span class="title">Github :</span> <a href="https://{{ @$getrecord[0]->github }}"  target="_blank"><span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->github }}</span></a> </li>
                             <li> <span class="title">languages :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->languages }}</span> </li>
                         </ul>
                     </div>

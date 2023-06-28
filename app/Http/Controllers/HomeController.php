@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\HomeModel;
 use App\Models\AboutModel;
 use App\Models\PortfolioModel;
+use App\Models\ContactModel;
 
 class HomeController extends Controller
 {
@@ -37,8 +38,30 @@ class HomeController extends Controller
 
     public function contact()
     {
+
+
         $data['meta_title'] = 'Contact Me';
         return view('home.contact', $data);
+    }
+
+
+    public function contact_post(Request $request)
+    {
+        // dd($request->all());
+
+        $insertRecord = new ContactModel;
+
+        $insertRecord->name = trim($request->name);
+
+        $insertRecord->email = trim($request->email);
+
+        $insertRecord->subject = trim($request->subject);
+
+        $insertRecord->message = trim($request->message);
+
+        $insertRecord->save();
+
+        return redirect()->back()->with('success', 'Your Message Has Been Sent To Maxwell');
     }
 
 

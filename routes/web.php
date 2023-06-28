@@ -98,4 +98,7 @@ Route::get('blog', [HomeController::class, 'blog']);
 Route::get('blog-post', [HomeController::class, 'blog_post']);
 
 
+Route::post('contact/post', [HomeController::class, 'contact_post']);
+
+
 
