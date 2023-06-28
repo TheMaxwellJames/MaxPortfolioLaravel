@@ -7,6 +7,8 @@ use App\Models\HomeModel;
 use App\Models\AboutModel;
 use App\Models\PortfolioModel;
 use App\Models\ContactModel;
+use Mail;
+use App\Mail\Mail\ContactMail;
 
 class HomeController extends Controller
 {
@@ -60,6 +62,8 @@ class HomeController extends Controller
         $insertRecord->message = trim($request->message);
 
         $insertRecord->save();
+
+        Mail::to('maxichanj@gmail.com')->send(new ContactMail($request));
 
         return redirect()->back()->with('success', 'Your Message Has Been Sent To Maxwell');
     }
