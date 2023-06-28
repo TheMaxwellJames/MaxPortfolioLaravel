@@ -76,6 +76,14 @@ class PortfolioController extends Controller
 
     $updateRecord->title = trim($request->title);
 
+    $updateRecord->name = trim($request->name);
+
+    $updateRecord->client = trim($request->client);
+
+    $updateRecord->languages = trim($request->languages);
+
+    $updateRecord->preview = trim($request->preview);
+
     if(!empty($request->file('image'))) 
     {
 
