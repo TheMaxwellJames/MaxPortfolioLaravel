@@ -10,6 +10,8 @@ use App\Http\Controllers\Backend\DashboardController;
 
 use App\Http\Controllers\Backend\PortfolioController;
 
+use App\Http\Controllers\Backend\BlogController;
+
 
 
 /*
@@ -68,6 +70,12 @@ Route::get('admin/contact/delete/{id}', [DashboardController::class, 'admin_cont
 
 Route::get('admin/blog', [DashboardController::class, 'admin_blog']);
 
+Route::get('admin/blog/add', [BlogController::class, 'admin_blog_add']);
+
+Route::post('admin/blog/add', [BlogController::class, 'admin_blog_add_post']);
+
+Route::get('admin/blog/delete/{id}', [BlogController::class, 'admin_blog_delete']);
+
 
 Route::get('admin/portfolio/add', [PortfolioController::class, 'portfolio_add']);
 
@@ -78,6 +86,9 @@ Route::get('admin/portfolio/edit/{id}', [PortfolioController::class, 'admin_port
 Route::post('admin/portfolio/edit/{id}', [PortfolioController::class, 'admin_portfolio_edit_post']);
 
 Route::get('admin/portfolio/delete/{id}', [PortfolioController::class, 'admin_portfolio_delete']);
+
+
+
 
 
 
