@@ -53,7 +53,7 @@
                     <figure>
                         <!-- Project Details Starts -->
                         <figcaption>
-                            <h3>Image Project</h3>
+                            <h3>{{$value->title}}</h3>
                             <div class="row open-sans-font">
                                 <div class="col-12 col-sm-6 mb-2">
                                     <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Project </span>: <span class="ft-wt-600 uppercase">{{$value->name}}</span>

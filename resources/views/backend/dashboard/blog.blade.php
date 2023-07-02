@@ -81,8 +81,8 @@
               <td>{{$value->description}}</td>
 
               <td>
-              <a href="{{ url('admin/portfolio/edit/' . $value->id) }}" class="btn btn-primary">Edit</a>
-                        <a onclick="return confirm('Sure to delete?')" href="{{ url('admin/blog/delete/' . $value->id) }}" class="btn btn-danger">Delete</a>
+          <a href="{{ url('admin/blog/edit/' . $value->id) }}" class="btn btn-primary">Edit</a>
+           <a onclick="return confirm('Sure to delete?')" href="{{ url('admin/blog/delete/' . $value->id) }}" class="btn btn-danger">Delete</a>
               </td>
             </tr>
             @endforeach
