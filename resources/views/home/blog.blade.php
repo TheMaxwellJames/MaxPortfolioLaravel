@@ -29,125 +29,28 @@
         <!-- Articles Starts -->
         <div class="row">
             <!-- Article Starts -->
+            @foreach($getrecord as $value)
             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
                 <article class="post-container">
                     <div class="post-thumb">
-                        <a href="{{url('blog-post')}}" class="d-block position-relative overflow-hidden">
-                            <img src="img/blog/blog-post-1.jpg" class="img-fluid" alt="Blog Post">
+                        <a href="{{url('blog-post/'.$value->id)}}" class="d-block position-relative overflow-hidden">
+                            <img src="{{ url('public/blog/'.$value->image) }}" class="img-fluid" alt="Blog Post">
                         </a>
                     </div>
                     <div class="post-content">
                         <div class="entry-header">
-                            <h3><a href="{{url('blog-post')}}">How to Own Your Audience by Creating an Email List</a></h3>
+                            <h3><a href="{{url('blog-post')}}"></a>{{$value->title}}</h3>
                         </div>
                         <div class="entry-content open-sans-font">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
+                            <p> {{$value->description}}
                             </p>
                         </div>
                     </div>
                 </article>
             </div>
+            @endforeach
             <!-- Article Ends -->
-            <!-- Article Starts -->
-            <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
-                <article class="post-container">
-                    <div class="post-thumb">
-                        <a href="{{url('blog-post')}}" class="d-block position-relative overflow-hidden">
-                            <img src="img/blog/blog-post-2.jpg" class="img-fluid" alt="">
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <div class="entry-header">
-                            <h3><a href="{{url('blog-post')}}">Top 10 Toolkits for Deep Learning in 2020</a></h3>
-                        </div>
-                        <div class="entry-content open-sans-font">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
-                            </p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <!-- Article Ends -->
-            <!-- Article Starts -->
-            <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
-                <article class="post-container">
-                    <div class="post-thumb">
-                        <a href="{{url('blog-post')}}" class="d-block position-relative overflow-hidden">
-                            <img src="img/blog/blog-post-3.jpg" class="img-fluid" alt="">
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <div class="entry-header">
-                            <h3><a href="{{url('blog-post')}}">Everything You Need to Know About Web Accessibility</a></h3>
-                        </div>
-                        <div class="entry-content open-sans-font">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
-                            </p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <!-- Article Ends -->
-            <!-- Article Starts -->
-            <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
-                <article class="post-container">
-                    <div class="post-thumb">
-                        <a href="{{url('blog-post')}}" class="d-block position-relative overflow-hidden">
-                            <img src="img/blog/blog-post-4.jpg" class="img-fluid" alt="">
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <div class="entry-header">
-                            <h3><a href="{{url('blog-post')}}">How to Inject Humor & Comedy Into Your Brand</a></h3>
-                        </div>
-                        <div class="entry-content open-sans-font">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
-                            </p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <!-- Article Ends -->
-            <!-- Article Starts -->
-            <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
-                <article class="post-container">
-                    <div class="post-thumb">
-                        <a href="{{url('blog-post')}}" class="d-block position-relative overflow-hidden">
-                            <img src="img/blog/blog-post-5.jpg" class="img-fluid" alt="">
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <div class="entry-header">
-                            <h3><a href="{{url('blog-post')}}">Women in Web Design: How To Achieve Success</a></h3>
-                        </div>
-                        <div class="entry-content open-sans-font">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
-                            </p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <!-- Article Ends -->
-            <!-- Article Starts -->
-            <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
-                <article class="post-container">
-                    <div class="post-thumb">
-                        <a href="{{url('blog-post')}}" class="d-block position-relative overflow-hidden">
-                            <img src="img/blog/blog-post-6.jpg" class="img-fluid" alt="">
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <div class="entry-header">
-                            <h3><a href="{{url('blog-post')}}">Evergreen versus topical content: An overview</a></h3>
-                        </div>
-                        <div class="entry-content open-sans-font">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
-                            </p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <!-- Article Ends -->
+     
             <!-- Pagination Starts -->
             <div class="col-12 mt-4">
                 <nav aria-label="Page navigation example">

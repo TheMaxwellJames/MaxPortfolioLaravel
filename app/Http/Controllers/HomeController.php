@@ -7,6 +7,7 @@ use App\Models\HomeModel;
 use App\Models\AboutModel;
 use App\Models\PortfolioModel;
 use App\Models\ContactModel;
+use App\Models\BlogModel;
 use Mail;
 use App\Mail\Mail\ContactMail;
 
@@ -78,14 +79,17 @@ class HomeController extends Controller
     
     public function blog()
     {
+         $data['getrecord'] = BlogModel::get();
         $data['meta_title'] = 'My Blog';
         return view('home.blog', $data);
     }
 
 
 
-    public function blog_post()
+    public function blog_post(Request $request, $id)
     {
+
+        $data['getrecord'] = BlogModel::find($id);
         $data['meta_title'] = 'Blog-Post';
         return view('home.blog_post', $data);
     }
