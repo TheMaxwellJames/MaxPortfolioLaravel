@@ -14,6 +14,8 @@ use App\Http\Controllers\Backend\BlogController;
 
 use App\Http\Controllers\Backend\SocialIconController;
 
+use App\Http\Controllers\Backend\MyAccountController;
+
 
 
 /*
@@ -103,6 +105,13 @@ Route::get('admin/social_icon', [SocialIconController::class, 'admin_social_icon
 
 
 Route::post('admin/social_icon/update/{id}', [SocialIconController::class, 'admin_social_icon_update']);
+
+
+
+Route::get('admin/my_account', [MyAccountController::class, 'admin_my_account']);
+
+
+Route::post('admin/my_account/update', [MyAccountController::class, 'my_account_update'] );
 
 
 
