@@ -89,6 +89,16 @@
             </a>
           </li>
 
+          
+          <li class="nav-item">
+            <a href="{{ url('admin/social_icon')}}" class="nav-link @if(Request::segment(2)== 'social_icon') active @endif">
+              <i class="nav-icon fas fa-share-alt"></i>
+              <p>
+                Social Icon
+              </p>
+            </a>
+          </li>
+
 
           <li class="nav-item">
             <a href="{{ url('logout')}}" class="nav-link @if(Request::segment(2)== 'logout') active @endif">

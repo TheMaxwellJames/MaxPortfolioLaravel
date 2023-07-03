@@ -12,6 +12,8 @@ use App\Http\Controllers\Backend\PortfolioController;
 
 use App\Http\Controllers\Backend\BlogController;
 
+use App\Http\Controllers\Backend\SocialIconController;
+
 
 
 /*
@@ -97,7 +99,10 @@ Route::post('admin/portfolio/edit/{id}', [PortfolioController::class, 'admin_por
 Route::get('admin/portfolio/delete/{id}', [PortfolioController::class, 'admin_portfolio_delete']);
 
 
+Route::get('admin/social_icon', [SocialIconController::class, 'admin_social_icon']);
 
+
+Route::post('admin/social_icon/update/{id}', [SocialIconController::class, 'admin_social_icon_update']);
 
 
 

@@ -8,6 +8,7 @@ use App\Models\AboutModel;
 use App\Models\PortfolioModel;
 use App\Models\ContactModel;
 use App\Models\BlogModel;
+use App\Models\Social_iconModel;
 use Mail;
 use App\Mail\Mail\ContactMail;
 
@@ -42,7 +43,7 @@ class HomeController extends Controller
     public function contact()
     {
 
-
+        $data['getrecord'] = Social_iconModel::find(1);
         $data['meta_title'] = 'Contact Me';
         return view('home.contact', $data);
     }
