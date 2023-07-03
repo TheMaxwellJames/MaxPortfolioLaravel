@@ -39,6 +39,8 @@ class BlogController extends Controller
             $insertRecord->image =$filename;
         }
 
+        $insertRecord->description_text_editor = trim($request->description_text_editor);
+
         $insertRecord->save();
 
         return redirect('admin/blog')->with('success', 'Blog Successfully Saved');
@@ -90,6 +92,9 @@ class BlogController extends Controller
 
 
         $updateRecord->description = trim($request->description);
+
+        
+        $updateRecord->description_text_editor = trim($request->description_text_editor);
 
         $updateRecord->save();
 

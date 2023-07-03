@@ -55,6 +55,7 @@
               <th>Image</th>
               <th>Title</th>
               <th>Description</th>
+              <th>Blog Description Text Editor</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -79,6 +80,7 @@
               </td>
               <td>{{$value->title}}</td>
               <td>{{$value->description}}</td>
+              <td>{!! $value->description_text_editor  !!}</td>
 
               <td>
           <a href="{{ url('admin/blog/edit/' . $value->id) }}" class="btn btn-primary">Edit</a>

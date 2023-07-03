@@ -57,7 +57,7 @@
           <div class="form-group row">
               <label for="" class="col-sm-2 col-form-label">Blog Image <span style="color: red;">*</span></label>
               <div class="col-sm-10">
-                <input type="file" name="image" class="form-control" required>
+                <input type="file" name="image" class="form-control">
 
                 @if($getrecord->image)
 
@@ -88,6 +88,19 @@
               <label for="" class="col-sm-2 col-form-label">Blog Description<span style="color: red;">*</span></label>
               <div class="col-sm-10">
                <textarea name="description" type="text" class="form-control" placeholder="Blog Description">{{$getrecord->description}}</textarea>
+
+
+              </div>
+
+            </div>
+
+
+
+
+            <div class="form-group row">
+              <label for="" class="col-sm-2 col-form-label">Blog Description  Text Editor<span style="color: red;">*</span></label>
+              <div class="col-sm-10">
+               <textarea name="description_text_editor" type="text" class="form-control editor" placeholder="Text Editor">{{$getrecord->description_text_editor}}</textarea>
 
 
               </div>
@@ -153,5 +166,53 @@
 
 
 @include('backend.layouts.script')
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.5.1/tinymce.min.js"></script>
+
+<script type="text/javascript">
+
+
+tinymce.init({
+
+
+  selector:  '.editor',
+
+
+  height: '500px',
+              plugins: 'link code image textcolor codesample',
+                      codesample_language: [
+                        {text: 'HTML/XML', value:'markup'},
+                        {text: 'JavaScript', value:'javascript'},
+                        {text: 'CSS', value:'css'},
+                        {text: 'PHP', value:'php'},
+                        {text: 'Ruby', value:'ruby'},
+                        {text: 'Python', value:'python'},
+                        {text: 'Java', value:'java'},
+                        {text: 'C', value:'c'},
+                        {text: 'C#', value:'csharp'},
+                        {text: 'C++', value:'cpp'},
+                      ],
+
+
+                      
+
+                      toolbar: [
+                        "fontselect | bullist numlist outdent indent | undo redo | fontsizeselect | styleselect | bold italic link image", "codesample",
+                        "alignleft aligncenter alignright Justify | forecolor backcolor", "fullscreen"
+
+                      ],
+
+
+
+                      fontsize_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+                              font_formats: 'Arial=arial, helvetica, sans-serif; Courier New=courier new,courier,monospace;AkrutiKndPadmini=Akpdmi-n',
+
+
+})
+
+</script>
 </body>
 </html>
