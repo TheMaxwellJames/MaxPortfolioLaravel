@@ -62,6 +62,10 @@ Route::get('admin/about', [DashboardController::class, 'admin_about']);
 
 Route::post('admin/about/post', [DashboardController::class, 'admin_about_post']);
 
+Route::get('admin/experience', [DashboardController::class, 'admin_experience']);
+
+Route::post('admin/experience/post', [DashboardController::class, 'admin_experience_post']);
+
 Route::get('admin/portfolio', [DashboardController::class, 'admin_portfolio']);
 
 

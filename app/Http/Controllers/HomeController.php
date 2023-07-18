@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\HomeModel;
 use App\Models\AboutModel;
+use App\Models\ExperienceModel;
 use App\Models\PortfolioModel;
 use App\Models\ContactModel;
 use App\Models\BlogModel;
@@ -26,8 +27,11 @@ class HomeController extends Controller
     {
 
         $data['getrecord'] = AboutModel::all();
+
+        $data['experienceRecords'] = ExperienceModel::all();
+
         $data['meta_title'] = 'About Me';
-        return view('home.about', $data);
+        return view('home.about', $data,);
     }
 
 

@@ -8,9 +8,11 @@ use Illuminate\Http\Request;
 
 use App\Models\HomeModel;
 use App\Models\AboutModel;
+use App\Models\ExperienceModel;
 use App\Models\PortfolioModel;
 use App\Models\ContactModel;
 use App\Models\BlogModel;
+
 use Str;
 
 class DashboardController extends Controller
@@ -136,10 +138,61 @@ class DashboardController extends Controller
         $insertRecord->description = trim($request->description);
 
 
+        if(!empty($request->file('profile')))
+        {
+
+            if(!empty($insertRecord->profile) && file_exists('public/img/' . $insertRecord->profile))
+
+            {
+                unlink('public/img/'. $insertRecord->profile);
+            }
+            
+
+            $file = $request->file('profile');
+            $randomStr = Str::random(30);
+            $filename = $randomStr . '.' . $file->getClientOriginalExtension();
+
+            $file->move('public/img/', $filename);
+            $insertRecord->profile =$filename;
+        }
+
+
+
         $insertRecord->save();
 
         return redirect()->back()->with('success', 'Successfully Saved');
         
+
+    }
+
+
+    public function admin_experience(Request $request)
+    {
+        $data['getrecord'] = ExperienceModel::all();
+        return view('backend.dashboard.experience', $data);
+    }
+
+
+
+
+
+    public function admin_experience_post(Request $request)
+    {
+       // dd($request->all());
+
+
+       $insertRecord = new ExperienceModel;
+
+        $insertRecord->year_of_experience = trim($request->year_of_experience);
+        $insertRecord->title = trim($request->title);
+        $insertRecord->sub_title = trim($request->sub_title);
+        $insertRecord->description = trim($request->description);
+
+
+        $insertRecord->save();
+
+        return redirect()->back()->with('success', 'Successfully Saved');
+
 
     }
 

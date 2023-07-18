@@ -52,6 +52,19 @@
 
 <div class="card-body">
 
+  <div class="form-group row">
+    <label for="" class="col-sm-2 col-form-label">Profile Image</label>
+    <div class="col-sm-10">
+      <input type="file" name="profile" class="form-control">
+
+      @if(isset($getrecord[0]->profile))
+       <img src="{{ url('public/img/' . $getrecord[0]->profile) }}" width="200" height="200" alt="">
+      @endif
+    </div>
+  </div>
+
+  
+
 <div class="form-group row">
   <label for="" class="col-sm-2 col-form-label">First Name</label>
   <div class="col-sm-10">

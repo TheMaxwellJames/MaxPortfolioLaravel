@@ -32,7 +32,11 @@
                         <h3 class="text-uppercase custom-title mb-0 ft-wt-600">personal infos</h3>
                     </div>
                     <div class="col-12 d-block d-sm-none">
-                         <img src="img/th.jpg" class="img-fluid main-img-mobile" alt="my picture" /> 
+                        
+                        
+                        <img src="{{ url('public/img/' . $getrecord[0]->profile) }}" class="img-fluid main-img-mobile" alt="my picture" /> 
+                      
+                      
                     </div>
                     <div class="col-6">
                         <ul class="about-list list-unstyled open-sans-font">
@@ -99,84 +103,84 @@
                 <h3 class="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600">My Skills</h3>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
-                <div class="c100 p25">
-                    <span>{{ @$getrecord[0]->html }}%</span>
+                {{-- <div class="c100 p100">
+                    <span>{{ @$getrecord[0]->html }}</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
-                </div>
-                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">html</h6>
+                </div> --}}
+                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">{{ @$getrecord[0]->html }}</h6>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
-                <div class="c100 p89">
-                     <span>{{ @$getrecord[0]->javascript }}%</span> 
+                {{-- <div class="c100 p89">
+                     <span>{{ @$getrecord[0]->javascript }}</span> 
                     <div class="slice">
                         <div class="bar"></div> 
                          <div class="fill"></div>
                     </div>
-                </div>
-                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">javascript</h6>
+                </div> --}}
+                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">{{ @$getrecord[0]->javascript }}</h6>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
-                <div class="c100 p70">
-                    <span>{{ @$getrecord[0]->css }}%</span>
+                {{-- <div class="c100 p70">
+                    <span>{{ @$getrecord[0]->css }}</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
-                </div>
-                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">css</h6>
+                </div> --}}
+                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">{{ @$getrecord[0]->css }}</h6>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
-                <div class="c100 p66">
-                    <span>{{ @$getrecord[0]->php }}%</span>
+                {{-- <div class="c100 p66">
+                    <span>{{ @$getrecord[0]->php }}</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
-                </div>
-                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">php</h6>
+                </div> --}}
+                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">{{ @$getrecord[0]->php }}</h6>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
-                <div class="c100 p95">
-                    <span>{{ @$getrecord[0]->laravel }}%</span>
+                {{-- <div class="c100 p95">
+                    <span>{{ @$getrecord[0]->laravel }}</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
-                </div>
-                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">Laravel</h6>
+                </div> --}}
+                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">{{ @$getrecord[0]->laravel }}</h6>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
-                <div class="c100 p50">
-                    <span>{{ @$getrecord[0]->flutter }}%</span>
+                {{-- <div class="c100 p50">
+                    <span>{{ @$getrecord[0]->flutter }}</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
-                </div>
-                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">Flutter</h6>
+                </div> --}}
+                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">{{ @$getrecord[0]->flutter }}</h6>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
-                <div class="c100 p65">
-                    <span>{{ @$getrecord[0]->python }}%</span>
+                {{-- <div class="c100 p65">
+                    <span>{{ @$getrecord[0]->python }}</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
-                </div>
-                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">Python</h6>
+                </div> --}}
+                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">{{ @$getrecord[0]->python }}</h6>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
-                <div class="c100 p45">
-                    <span>{{ @$getrecord[0]->django }}%</span>
+                {{-- <div class="c100 p45">
+                    <span>{{ @$getrecord[0]->django }}</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                     </div>
-                </div>
-                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">Django</h6>
+                </div> --}}
+                <h6 class="text-uppercase open-sans-font text-center mt-2 mt-sm-4">{{ @$getrecord[0]->django }}</h6>
             </div>
         </div>
         <!-- Skills Ends -->
@@ -186,6 +190,7 @@
             <div class="col-12">
                 <h3 class="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">Experience <span>&</span> Education</h3>
             </div>
+            @foreach($experienceRecords as $value)
             <div class="col-lg-6 m-15px-tb">
                 <div class="resume-box">
                     <ul>
@@ -193,9 +198,9 @@
                             <div class="icon">
                                 <i class="fa fa-briefcase"></i>
                             </div>
-                            <span class="time open-sans-font text-uppercase">{{ @$getrecord[0]->year_of_experience }}</span>
-                            <h5 class="poppins-font text-uppercase">{{ @$getrecord[0]->title }} <span class="place open-sans-font">{{ @$getrecord[0]->sub_title }}</span></h5>
-                            <p class="open-sans-font">{{ @$getrecord[0]->description }}</p>
+                            <span class="time open-sans-font text-uppercase">{{ $value->year_of_experience}}</span>
+                            <h5 class="poppins-font text-uppercase">{{ $value->title }} <span class="place open-sans-font">{{ $value->sub_title }}</span></h5>
+                            <p class="open-sans-font">{{ $value->description }}</p>
                         </li>
                         <!-- <li>
                             <div class="icon">
@@ -216,6 +221,7 @@
                     </ul>
                 </div>
             </div>
+            @endforeach
             <!-- <div class="col-lg-6 m-15px-tb">
                 <div class="resume-box">
                     <ul>

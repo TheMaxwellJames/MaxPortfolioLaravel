@@ -59,6 +59,16 @@
 
 
           <li class="nav-item">
+            <a href="{{ url('admin/experience')}}" class="nav-link @if(Request::segment(2)== 'experience') active @endif">
+              <i class="nav-icon fa fa-info-circle"></i>
+              <p>
+                Experience
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
             <a href="{{ url('admin/portfolio')}}" class="nav-link @if(Request::segment(2)== 'portfolio') active @endif">
               <i class="nav-icon fa fa-briefcase"></i>
               <p>
