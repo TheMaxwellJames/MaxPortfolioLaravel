@@ -31,6 +31,13 @@
                 <h2>Blog</h2>
             </a>
         </li>
+
+        <li class="icon-box  @if(Request::segment(1) == 'newsletter') active @endif">
+            <i class="fa fa-envelope"></i>
+            <a href="{{url('newsletter')}}">
+                <h2>newsletter</h2>
+            </a>
+        </li>
     </ul>
     <!-- Fixed Navigation Ends -->
     <!-- Mobile Menu Starts -->
@@ -46,6 +53,7 @@
                 <li class="@if(Request::segment(1) == 'portfolio') active @endif" ><a href="{{url('portfolio')}}"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
                 <li class="@if(Request::segment(1) == 'contact') active @endif" ><a href="{{url('contact')}}"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
                 <li class="@if(Request::segment(1) == 'blog') active @endif" ><a href="{{url('blog')}}"><i class="fa fa-comments"></i><span>Blog</span></a></li>
+                <li class="@if(Request::segment(1) == 'newsletter') active @endif" ><a href="{{url('newsletter')}}"><i class="fa fa-comments"></i><span>newsletter</span></a></li>
             </ul>
         </div>
     </nav>

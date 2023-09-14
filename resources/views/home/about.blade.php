@@ -32,24 +32,24 @@
                         <h3 class="text-uppercase custom-title mb-0 ft-wt-600">personal infos</h3>
                     </div>
                     <div class="col-12 d-block d-sm-none">
-                        
-                        
-                        <img src="{{ url('public/img/' . $getrecord[0]->profile) }}" class="img-fluid main-img-mobile" alt="my picture" /> 
-                      
-                      
+
+
+                        <img src="{{ url('public/img/' . $getrecord[0]->profile) }}" class="img-fluid main-img-mobile" alt="my picture" />
+
+
                     </div>
                     <div class="col-6">
                         <ul class="about-list list-unstyled open-sans-font">
                             <li> <span class="title">first name :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->first_name }}</span> </li>
                             <li> <span class="title">last name :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->last_name }}</span> </li>
-                            <li> <span class="title">Age :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->age }}</span> </li>
-                            <li> <span class="title">Nationality :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->nationality }}</span> </li>
+                            {{-- <li> <span class="title">Age :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->age }}</span> </li> --}}
+                            {{-- <li> <span class="title">Nationality :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->nationality }}</span> </li> --}}
                             <li> <span class="title">Freelance :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->freelance }}</span> </li>
                         </ul>
                     </div>
                     <div class="col-6">
                         <ul class="about-list list-unstyled open-sans-font">
-                            <li> <span class="title">Address :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->address}}</span> </li>
+                            {{-- <li> <span class="title">Address :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->address}}</span> </li> --}}
                             <li> <span class="title">phone :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->phone }}</span> </li>
                             <li> <span class="title">Email :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->email }}</span> </li>
                             <li> <span class="title">Github :</span> <a href="https://{{ @$getrecord[0]->github }}"  target="_blank"><span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{ @$getrecord[0]->github }}</span></a> </li>
@@ -82,14 +82,14 @@
                     </div>
                     <div class="col-6">
                         <div class="box-stats">
-                            <h3 class="poppins-font position-relative">{{ @$getrecord[0]->happy_customers }}</h3>
-                            <p class="open-sans-font m-0 position-relative text-uppercase">Happy<span class="d-block">customers</span></p>
+                            {{-- <h3 class="poppins-font position-relative">{{ @$getrecord[0]->happy_customers }}</h3>
+                            <p class="open-sans-font m-0 position-relative text-uppercase">Happy<span class="d-block">customers</span></p> --}}
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="box-stats">
-                            <h3 class="poppins-font position-relative">{{ @$getrecord[0]->awards_won }}</h3>
-                            <p class="open-sans-font m-0 position-relative text-uppercase">awards <span class="d-block">won</span></p>
+                            {{-- <h3 class="poppins-font position-relative">{{ @$getrecord[0]->awards_won }}</h3>
+                            <p class="open-sans-font m-0 position-relative text-uppercase">awards <span class="d-block">won</span></p> --}}
                         </div>
                     </div>
                 </div>
@@ -114,9 +114,9 @@
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 {{-- <div class="c100 p89">
-                     <span>{{ @$getrecord[0]->javascript }}</span> 
+                     <span>{{ @$getrecord[0]->javascript }}</span>
                     <div class="slice">
-                        <div class="bar"></div> 
+                        <div class="bar"></div>
                          <div class="fill"></div>
                     </div>
                 </div> --}}

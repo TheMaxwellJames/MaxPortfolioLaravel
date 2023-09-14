@@ -51,7 +51,7 @@ Route::post('forgot_admin', [AuthController::class, 'forgot_admin']);
 
 Route::group(['middleware' => 'admin'], function(){
 
-    
+
 Route::get('admin/dashboard', [DashboardController::class, 'dashboard']);
 
 Route::get('admin/home', [DashboardController::class, 'admin_home']);
@@ -136,6 +136,8 @@ Route::get('portfolio', [HomeController::class, 'portfolio']);
 Route::get('contact', [HomeController::class, 'contact']);
 
 Route::get('blog', [HomeController::class, 'blog']);
+
+Route::get('newsletter', [HomeController::class, 'newsletter']);
 
 
 Route::get('blog-post/{id}', [HomeController::class, 'blog_post']);

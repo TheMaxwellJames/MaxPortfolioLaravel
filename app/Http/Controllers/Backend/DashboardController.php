@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 
+
 use App\Models\HomeModel;
 use App\Models\AboutModel;
 use App\Models\ExperienceModel;
@@ -13,7 +14,9 @@ use App\Models\PortfolioModel;
 use App\Models\ContactModel;
 use App\Models\BlogModel;
 
-use Str;
+//use Str;
+use Illuminate\Support\Str;
+
 
 class DashboardController extends Controller
 {
@@ -45,12 +48,12 @@ class DashboardController extends Controller
                 $insertRecord = new HomeModel;
 
             }else{
-                   
+
                 $insertRecord = HomeModel::find($request->id);
 
             }
 
-           
+
 
             $insertRecord->your_name = trim($request->your_name);
             $insertRecord->work_experience = trim($request->work_experience);
@@ -65,7 +68,7 @@ class DashboardController extends Controller
                 {
                     unlink('public/img/'. $insertRecord->profile);
                 }
-                
+
 
                 $file = $request->file('profile');
                 $randomStr = Str::random(30);
@@ -105,11 +108,11 @@ class DashboardController extends Controller
                     'first_name' => 'required'
                 ]);
                 $insertRecord = new AboutModel;
-            }else 
+            }else
             {
                 $insertRecord =  AboutModel::find($request->id);
             }
-        
+
         $insertRecord->first_name = trim($request->first_name);
         $insertRecord->last_name = trim($request->last_name);
         $insertRecord->age = trim($request->age);
@@ -146,7 +149,7 @@ class DashboardController extends Controller
             {
                 unlink('public/img/'. $insertRecord->profile);
             }
-            
+
 
             $file = $request->file('profile');
             $randomStr = Str::random(30);
@@ -161,7 +164,7 @@ class DashboardController extends Controller
         $insertRecord->save();
 
         return redirect()->back()->with('success', 'Successfully Saved');
-        
+
 
     }
 

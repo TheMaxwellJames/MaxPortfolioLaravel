@@ -76,12 +76,12 @@ class HomeController extends Controller
 
 
 
-    
 
 
 
 
-    
+
+
     public function blog()
     {
          $data['getrecord'] = BlogModel::get();
@@ -98,8 +98,17 @@ class HomeController extends Controller
         $data['meta_title'] = 'Blog-Post';
         return view('home.blog_post', $data);
     }
-    
 
-      
+
+
+
+    public function newsletter()
+    {
+        $data['meta_title'] = 'Home';
+        return view('home.newsletter', $data);
+    }
+
+
+
 
 }
