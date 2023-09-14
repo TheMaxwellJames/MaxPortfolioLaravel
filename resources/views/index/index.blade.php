@@ -4,7 +4,7 @@
 
 
 <head>
-    @include('home.css')
+    @include('index.css')
 </head>
 
 <body class="home">
@@ -12,7 +12,7 @@
 <!-- Header Starts -->
 
 
-@include('home.header')
+@include('index.header')
 
 
 <!-- Header Ends -->
@@ -33,7 +33,7 @@
         </div>
         <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
             <div>
-                 <img src="{{ url('public/img/' . $getrecord[0]->profile) }}" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" /> 
+                 <img src="{{ url('public/img/' . $getrecord[0]->profile) }}" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
                <p>HI THERE</p> <h1 class="text-uppercase poppins-font">I'm {{ @$getrecord[0]->your_name }}<span>{{ @$getrecord[0]->work_experience }}</span></h1>
                 <p class="open-sans-font">{{ @$getrecord[0]->description }}</p>
                 <a class="button" href="{{url('about')}}">
@@ -49,7 +49,7 @@
 <!-- Template JS Files -->
 
 
-@include('home.script')
+@include('index.script')
 
 </body>
 
