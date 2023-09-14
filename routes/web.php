@@ -33,6 +33,36 @@ use App\Http\Controllers\Backend\MyAccountController;
 //     return view('welcome');
 // });
 
+Route::get('/', [HomeController::class, 'index']);
+
+Route::get('about', [HomeController::class, 'about']);
+
+
+Route::get('portfolio', [HomeController::class, 'portfolio']);
+
+Route::get('contact', [HomeController::class, 'contact']);
+
+Route::get('blog', [HomeController::class, 'blog']);
+
+Route::get('newsletter', [HomeController::class, 'newsletter']);
+
+
+Route::get('blog-post/{id}', [HomeController::class, 'blog_post']);
+
+
+Route::post('contact/post', [HomeController::class, 'contact_post']);
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route::get('login', [AuthController::class, 'login']);
 
@@ -126,24 +156,7 @@ Route::post('admin/my_account/update', [MyAccountController::class, 'my_account_
 
 
 
-Route::get('/', [HomeController::class, 'index']);
 
-Route::get('about', [HomeController::class, 'about']);
-
-
-Route::get('portfolio', [HomeController::class, 'portfolio']);
-
-Route::get('contact', [HomeController::class, 'contact']);
-
-Route::get('blog', [HomeController::class, 'blog']);
-
-Route::get('newsletter', [HomeController::class, 'newsletter']);
-
-
-Route::get('blog-post/{id}', [HomeController::class, 'blog_post']);
-
-
-Route::post('contact/post', [HomeController::class, 'contact_post']);
 
 
 
