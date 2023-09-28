@@ -4,7 +4,7 @@
 
 
 <head>
-    @include('index.css')
+    @include('home.css')
 </head>
 
 <body class="home">
@@ -12,7 +12,7 @@
 <!-- Header Starts -->
 
 
-@include('index.header')
+@include('home.header')
 
 
 <!-- Header Ends -->
@@ -49,7 +49,7 @@
 <!-- Template JS Files -->
 
 
-@include('index.script')
+@include('home.script')
 
 </body>
 

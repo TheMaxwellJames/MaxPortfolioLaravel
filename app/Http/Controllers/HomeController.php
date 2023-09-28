@@ -19,7 +19,7 @@ class HomeController extends Controller
     {
         $data['getrecord'] = HomeModel::all();
         $data['meta_title'] = 'Home';
-        return view('index.index', $data);
+        return view('home.index', $data);
     }
 
 
@@ -31,7 +31,7 @@ class HomeController extends Controller
         $data['experienceRecords'] = ExperienceModel::all();
 
         $data['meta_title'] = 'About Me';
-        return view('index.about', $data,);
+        return view('home.about', $data,);
     }
 
 
